@@ -17,7 +17,7 @@ connectDB()
 const app = express()
 
 app.use(cors({
-  origin: 'https://soft-starlight-c178c5.netlify.app',
+  origin: 'https://voxelhubua2.netlify.app',
   credentials: true,
 }))
 
