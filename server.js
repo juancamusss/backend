@@ -6,6 +6,7 @@ const {errorHandler} = require('./middleware/errorMiddleware')
 const connectDB = require('./config/db')
 const audioRoutes = require('./rutas/audioRoutes')
 const proxyRoutes = require('./rutas/proxyRoutes');
+const cors = require('cors')
 
 
 const port = process.env.PORT || 5000
@@ -15,6 +16,10 @@ connectDB()
 
 const app = express()
 
+app.use(cors({
+  origin: 'https://soft-starlight-c178c5.netlify.app',
+  credentials: true,
+}))
 
 
 
