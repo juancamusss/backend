@@ -3,7 +3,8 @@ const fs = require('fs')
 const { google } = require('googleapis')
 require('dotenv').config({ path: '.env' })
 
-const KEYFILEPATH = 'backend/google-service-account.json'
+const KEYFILEPATH = '/etc/secrets/google-service-account.json'
+
 const SCOPES = ['https://www.googleapis.com/auth/drive']
 
 const auth = new google.auth.GoogleAuth({
